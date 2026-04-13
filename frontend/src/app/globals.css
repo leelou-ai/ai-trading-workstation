@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0d1117;
+  color: #e6edf3;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes flashGreen {
+  0% { background-color: rgba(63, 185, 80, 0.35); }
+  100% { background-color: transparent; }
+}
+@keyframes flashRed {
+  0% { background-color: rgba(248, 81, 73, 0.35); }
+  100% { background-color: transparent; }
+}
+.flash-green { animation: flashGreen 500ms ease-out forwards; }
+.flash-red { animation: flashRed 500ms ease-out forwards; }
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #0d1117; }
+::-webkit-scrollbar-thumb { background: #30363d; border-radius: 2px; }
+
+* { box-sizing: border-box; }
